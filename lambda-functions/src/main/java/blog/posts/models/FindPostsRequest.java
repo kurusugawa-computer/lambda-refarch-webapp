@@ -1,9 +1,8 @@
 package blog.posts.models;
 
+import blog.configuration.RequestConfiguration;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
-import blog.configuration.RequestConfiguration;
 
 public class FindPostsRequest {
 
@@ -17,13 +16,13 @@ public class FindPostsRequest {
     public void setConfig(RequestConfiguration config) {
         this.config = config;
     }
-    
+
     public String getForumId() {
-    	return forumId;
+        return forumId;
     }
-    
+
     public void setForumId(String forumId) {
-    	this.forumId = forumId;
+        this.forumId = forumId;
     }
 
     @Override

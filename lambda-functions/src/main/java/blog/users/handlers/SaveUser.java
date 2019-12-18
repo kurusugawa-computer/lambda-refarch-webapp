@@ -1,18 +1,17 @@
 package blog.users.handlers;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-
+import blog.configuration.ApplicationConfiguration;
+import blog.configuration.ApplicationConfigurationStore;
+import blog.users.models.User;
+import blog.users.repositories.DynamoDBUserRepository;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.LambdaLogger;
 import com.amazonaws.services.lambda.runtime.RequestStreamHandler;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import blog.configuration.ApplicationConfiguration;
-import blog.configuration.ApplicationConfigurationStore;
-import blog.users.models.User;
-import blog.users.repositories.DynamoDBUserRepository;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 public class SaveUser implements RequestStreamHandler {
 

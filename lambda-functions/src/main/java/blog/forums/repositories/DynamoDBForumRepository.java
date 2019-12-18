@@ -1,15 +1,14 @@
 package blog.forums.repositories;
 
-import java.util.List;
-
+import blog.configuration.ApplicationConfiguration;
+import blog.forums.models.Forum;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapperConfig;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapperConfig.TableNameOverride;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBScanExpression;
 
-import blog.configuration.ApplicationConfiguration;
-import blog.forums.models.Forum;
+import java.util.List;
 
 public class DynamoDBForumRepository {
 
@@ -22,7 +21,7 @@ public class DynamoDBForumRepository {
     }
 
     public List<Forum> findForums() {
-        
+
         DynamoDBScanExpression scanExpression = new DynamoDBScanExpression();
 
         List<Forum> forumList = mapper.scan(Forum.class, scanExpression);

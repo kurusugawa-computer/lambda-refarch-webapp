@@ -1,20 +1,19 @@
 package blog.comments.handlers;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.List;
-
-import com.amazonaws.services.lambda.runtime.Context;
-import com.amazonaws.services.lambda.runtime.LambdaLogger;
-import com.amazonaws.services.lambda.runtime.RequestStreamHandler;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 import blog.comments.models.Comment;
 import blog.comments.models.FindCommentRequest;
 import blog.comments.repositories.DynamoDBCommentRepository;
 import blog.configuration.ApplicationConfiguration;
 import blog.configuration.ApplicationConfigurationStore;
+import com.amazonaws.services.lambda.runtime.Context;
+import com.amazonaws.services.lambda.runtime.LambdaLogger;
+import com.amazonaws.services.lambda.runtime.RequestStreamHandler;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.List;
 
 public class FindComments implements RequestStreamHandler {
 

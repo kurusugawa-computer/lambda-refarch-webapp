@@ -1,4 +1,5 @@
 package blog.configuration;
+
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
@@ -7,7 +8,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 @DynamoDBTable(tableName = "aws-serverless-config")
 public class ApplicationConfiguration {
-    
+
     private String environment;
     private String userDynamoDBTableName;
     private String postDynamoDBTableName;
@@ -44,15 +45,15 @@ public class ApplicationConfiguration {
     public void setPostDynamoDBTableName(String postDynamoDBTableName) {
         this.postDynamoDBTableName = postDynamoDBTableName;
     }
-    
+
     @DynamoDBAttribute(attributeName = "latest_post_ddb_table_name")
     public String getLatestPostDynamoDBTableName() {
-		return latestPostDynamoDBTableName;
-	}
+        return latestPostDynamoDBTableName;
+    }
 
-	public void setLatestPostDynamoDBTableName(String latestPostDynamoDBTableName) {
-		this.latestPostDynamoDBTableName = latestPostDynamoDBTableName;
-	}
+    public void setLatestPostDynamoDBTableName(String latestPostDynamoDBTableName) {
+        this.latestPostDynamoDBTableName = latestPostDynamoDBTableName;
+    }
 
     @DynamoDBAttribute(attributeName = "comment_ddb_table_name")
     public String getCommentDynamoDBTableName() {
@@ -89,16 +90,16 @@ public class ApplicationConfiguration {
     public void setEncryptionKeyId(String encryptionKeyId) {
         this.encryptionKeyId = encryptionKeyId;
     }
-    
+
     @DynamoDBAttribute(attributeName = "forum_ddb_table_name")
     public String getForumDynamoDBTableName() {
-		return forumDynamoDBTableName;
-	}
+        return forumDynamoDBTableName;
+    }
 
-	public void setForumDynamoDBTableName(String forumDynamoDBTableName) {
-		this.forumDynamoDBTableName = forumDynamoDBTableName;
-	}
-    
+    public void setForumDynamoDBTableName(String forumDynamoDBTableName) {
+        this.forumDynamoDBTableName = forumDynamoDBTableName;
+    }
+
     @Override
     public String toString() {
         ObjectMapper mapper = new ObjectMapper();

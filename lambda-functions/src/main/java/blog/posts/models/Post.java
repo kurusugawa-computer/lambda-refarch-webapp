@@ -1,28 +1,26 @@
 package blog.posts.models;
 
+import blog.configuration.RequestConfiguration;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBIgnore;
-import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBRangeKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import blog.configuration.RequestConfiguration;
-
 @DynamoDBTable(tableName = "REPLACED_BY_API")
 public class Post {
 
-	private String forumId;
+    private String forumId;
     private String id;
     private long createdAt;
     private String email;
     private String title;
     private String body;
     private RequestConfiguration requestConfiguration;
-    
+
     @DynamoDBHashKey
     public String getId() {
         return id;
@@ -31,7 +29,7 @@ public class Post {
     public void setId(String id) {
         this.id = id;
     }
-    
+
     @DynamoDBAttribute
     public String getForumId() {
         return forumId;

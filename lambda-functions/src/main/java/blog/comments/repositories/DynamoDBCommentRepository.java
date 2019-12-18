@@ -1,16 +1,15 @@
 package blog.comments.repositories;
 
-import java.util.Date;
-import java.util.List;
-
+import blog.comments.models.Comment;
+import blog.configuration.ApplicationConfiguration;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapperConfig;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapperConfig.TableNameOverride;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBQueryExpression;
 
-import blog.comments.models.Comment;
-import blog.configuration.ApplicationConfiguration;
+import java.util.Date;
+import java.util.List;
 
 public class DynamoDBCommentRepository {
 

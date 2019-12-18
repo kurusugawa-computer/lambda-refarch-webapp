@@ -1,18 +1,17 @@
 package blog.posts.models;
 
+import blog.configuration.RequestConfiguration;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import blog.configuration.RequestConfiguration;
-
 public class FindPostRequest {
 
-	private String forumId;
+    private String forumId;
     private String id;
     private RequestConfiguration requestConfiguration;
-    
+
     public String getForumId() {
         return forumId;
     }
@@ -20,7 +19,7 @@ public class FindPostRequest {
     public void setForumId(String forumId) {
         this.forumId = forumId;
     }
-    
+
     public String getId() {
         return id;
     }

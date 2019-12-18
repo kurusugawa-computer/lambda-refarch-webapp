@@ -1,5 +1,6 @@
 package blog.forums.models;
 
+import blog.configuration.RequestConfiguration;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBIgnore;
@@ -9,12 +10,10 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import blog.configuration.RequestConfiguration;
-
 @DynamoDBTable(tableName = "REPLACED_BY_API")
 public class Forum {
 
-	private String id;
+    private String id;
     private String name;
     private RequestConfiguration requestConfiguration;
 

@@ -1,11 +1,10 @@
 package blog.comments.models;
 
+import blog.configuration.RequestConfiguration;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
-import blog.configuration.RequestConfiguration;
 
 public class FindCommentRequest {
 

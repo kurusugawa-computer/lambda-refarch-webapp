@@ -1,13 +1,12 @@
 package blog.forums.models;
 
+import blog.configuration.RequestConfiguration;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import blog.configuration.RequestConfiguration;
-
 public class FindForumsRequest {
 
-	private RequestConfiguration config;
+    private RequestConfiguration config;
 
     public RequestConfiguration getConfig() {
         return config;
@@ -26,5 +25,5 @@ public class FindForumsRequest {
             return "error";
         }
     }
-	
+
 }

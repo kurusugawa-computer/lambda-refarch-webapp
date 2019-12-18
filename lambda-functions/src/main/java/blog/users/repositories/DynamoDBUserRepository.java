@@ -1,7 +1,7 @@
 package blog.users.repositories;
 
-import java.util.HashMap;
-
+import blog.configuration.ApplicationConfiguration;
+import blog.users.models.User;
 import com.amazonaws.services.cognitoidentity.AmazonCognitoIdentityClient;
 import com.amazonaws.services.cognitoidentity.model.GetOpenIdTokenForDeveloperIdentityRequest;
 import com.amazonaws.services.cognitoidentity.model.GetOpenIdTokenForDeveloperIdentityResult;
@@ -13,8 +13,7 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapperConfig.Table
 import com.amazonaws.services.dynamodbv2.datamodeling.encryption.providers.DirectKmsMaterialProvider;
 import com.amazonaws.services.kms.AWSKMSClient;
 
-import blog.configuration.ApplicationConfiguration;
-import blog.users.models.User;
+import java.util.HashMap;
 
 public class DynamoDBUserRepository {
 
